@@ -108,12 +108,7 @@ export default {
        }
     },
 
-    provide(){
-        return{
-            cameras: this.cameras
-        }
-
-    },
+ 
 
 
 computed: {

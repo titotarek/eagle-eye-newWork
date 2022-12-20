@@ -21,7 +21,6 @@
   <script>
 
   export default {
-    inject: ['cameras'],
   props:["cameraId"],
     
   data(){
@@ -31,11 +30,7 @@
     }
 
   },
-  created(){
-    const cameraId = this.$route.params.cameraId
-    console.log(cameraId)
-     cameraId = this.cameras.find((camera) => camera.cameraId === cameraId);
-  }
+ 
 
   }
   </script>
