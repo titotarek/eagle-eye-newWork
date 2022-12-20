@@ -7,7 +7,7 @@
     </div>
 
 
- <!--  import the Buttons to redirect to the Home component  -->
+ <!--  import the Buttons  => to redirect to the Home component   -->
     <Buttons/>
   </div>
 </template>
