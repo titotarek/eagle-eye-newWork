@@ -133,6 +133,10 @@ ul {
   .landing .text p {
     font-size: 18px;
   }
+  .search{
+    margin-left: 30%;
+  }
+  
 }
 
 .landing .image {
@@ -178,7 +182,10 @@ ul {
 /*  Start  Cards */
 
 .search{
-  margin-left: 35%;
+  margin-left: 28%;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
 
  
 }
@@ -201,15 +208,15 @@ ul {
 }
 
 
-.search .search-bar i{
+/* .search .search-bar i{
   content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 20px;
   color:  var(--main-color);
-  /* color: red; */
-}
+} */
+
 
 
 .search .search-bar  input[type="text"]{
@@ -234,6 +241,10 @@ ul {
   grid-gap: 30px;
   margin-top: 40px;
   
+}
+ .cr-left{
+  padding-top: 70px;
+  margin-left: 300px ;
 }
 
 
@@ -294,23 +305,24 @@ ul {
 
 
 
-.btn-load{
+.btn{
   position: relative;
-  margin-top: 100px;
+  top: 60px;
+color: var(--main-color);
   margin-left: 41%;
   align-items: center;
   padding: 20px 80px;
   border: 2px solid black;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 22px;
   text-transform: uppercase;
   cursor: pointer;
   z-index: 1;
   transition:  var(--main-transition);
   } 
 
-.btn-load::before,
-.btn-load::after{
+.btn::before,
+.btn::after{
   content: "";
   position: absolute;
   height: 12px;
@@ -329,26 +341,26 @@ ul {
   -o-transform: translateY(-50%);
 } 
 
-.btn-load::before{
+.btn::before{
   left:  -30px;
 }
 
-.btn-load::after{
+.btn::after{
   right:-30px;
 }
 
-.btn-load:hover:before{
+.btn:hover:before{
   z-index: -1;
   animation: left-move 0.5s linear  forwards ;
 }
 
 
-.btn-load:hover::after{
+.btn:hover::after{
   z-index: -1;
   animation: right-move 0.5s linear  forwards ;
 }
 
-.btn-load:hover{
+.btn:hover{
   color: white;
   border: 2px solid white;
   transition-delay: .3s;
@@ -373,6 +385,11 @@ ul {
 }
 
 /*  End  Footer */
+
+
+.not-found{
+  padding-top: 10px;
+}
 
 
 /*  Start Animation */

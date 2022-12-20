@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Camera from "../components/Camera.vue";
 import SingleCamera from "../components/SingleCamera.vue";
-// import PageNotFound from "../components/PageNotFound.vue";
-// import Camera from "../views/Camera.vue"
-// import SingleCamera from "../views/SingleCamera.vue"
+import PageNotFound from "../views/PageNotFound.vue";
 
 const routes = [
   {
@@ -18,12 +16,16 @@ const routes = [
     component: SingleCamera,
     props: true
   },
-  // {
-  //   path: '/catch-all(.*)*',
-  //   name: PageNotFound,
-  //   component: PageNotFound
 
-  // },
+  /*
+      PageNotFound is  Router for 404 Error Page
+  */
+  {
+    path: '/:catchAll(.*)',
+    name: PageNotFound,
+    component: PageNotFound
+
+  },
 
 ]
 

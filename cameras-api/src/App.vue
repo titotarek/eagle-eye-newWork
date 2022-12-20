@@ -1,24 +1,21 @@
 <template>
   <div>
-   <Header/>
+    <header className="heder">
+          <h1>EEagle Eye Networks Vue.Js Developer Assessment</h1>
+    </header>
    
-   <ForLogIn/>
    <Post/>
+   <!--  the router of the camera.vue router  -->
    <router-link to="/"></router-link> 
    <router-view/>
-   <Footer/>
   </div>
 
 </template>
 <script>
 
 import Post from "./components/Post.vue"
-import Header from "./components/Header.vue"
-import Footer from "./components/Footer.vue";
-// import Camera from "./components/Camera.vue";
-import ForLogIn from "./components/ForLogIn.vue";
 export default {
-  components:{Post, Footer, ForLogIn,Header },
+  components:{Post},
   data(){
     return{
     }
@@ -31,7 +28,14 @@ export default {
 </script>
 
 <style>
+/* 
+ index.css => is the  main template css File 
+*/
 @import "./assets/index.css";
+
+/* 
+ normalize.css => Render all element normally in all the browser 
+*/
 @import "./assets/normalize.css";
 
 
