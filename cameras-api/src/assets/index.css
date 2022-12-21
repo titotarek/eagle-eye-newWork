@@ -57,6 +57,32 @@ ul {
 
 
 
+.progress-indicator-wrapper{
+  position: fixed;
+  height: 5px;
+  background-color: #eee;
+  width: 100%;
+  /* top: 60pxt; */
+}
+
+.progress-indicator{
+    height: 5px;
+    background: var(--main-color);
+}
+/* 
+.scroller{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 5px;
+  background-color: #0075ff;
+  /* z-index: 9999999; */
+  /* width: 0; */
+/* }  */
+
+
+
+
 
 /* Start Landing */
 .heder{

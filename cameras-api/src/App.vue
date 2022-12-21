@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ProgressIndicator />
     <header className="heder">
           <h1>EEagle Eye Networks Vue.Js Developer Assessment</h1>
     </header>
@@ -14,8 +15,9 @@
 <script>
 
 import Post from "./components/Post.vue"
+import ProgressIndicator from "./components/ProgressIndicator.vue"
 export default {
-  components:{Post},
+  components:{Post,ProgressIndicator},
   data(){
     return{
     }
