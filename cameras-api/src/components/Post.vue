@@ -15,7 +15,7 @@
         }
         
     },
-
+                        
    
     //     mounted () {  
     //         const queryCode =  ""

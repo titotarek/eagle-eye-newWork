@@ -12,7 +12,6 @@ export default {
       ulr_base:"https://rest.cameramanager.com/oauth/authorize?scope=write&client_id=dev_test&response_type=code&redirect_uri=http://localhost:8080/"
     }
     
-    // /////////////
   }
 
 }
