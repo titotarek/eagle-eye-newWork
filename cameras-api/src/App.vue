@@ -5,7 +5,7 @@
     </header>
    
    <Post/>
-   <!--  the router of the camera.vue router  -->
+   <!--  the router of the camera.vue router   -->
    <router-link to="/"></router-link> 
    <router-view/>
   </div>
