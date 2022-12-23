@@ -1,37 +1,27 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Camera from "../components/Camera.vue";
-import SingleCamera from "../components/SingleCamera.vue";
-import PageNotFound from "../views/PageNotFound.vue";
+import { createRouter, createWebHistory } from "vue-router";
+ import Cameras from "../components/Cameras.vue"
+ import SingleCamera from "../components/SingleCamera.vue"
 
 const routes = [
-  {
-    path: '/',
-    name: 'Camera',
-    component: Camera
-  },
+	{
+		path: "/",
+		name: "Cameras",
+		component: Cameras,
+	},
 
-  {
-    path: '/single-camera/:cameraId',
-    name: 'SingleCamera',
-    component: SingleCamera,
-    props: true
-  },
+	{
+		path: "/single-camera/:cameraId",
+		name: "SingleCamera",
+		component: SingleCamera,
+		props: true,
+	},
 
-  /*
-      PageNotFound is  Router for 404 Error Page
-  */
-  {
-    path: '/:catchAll(.*)',
-    name: PageNotFound,
-    component: PageNotFound
 
-  },
-
-]
+];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+	history: createWebHistory(process.env.BASE_URL),
+	routes,
+});
 
-export default router
+export default router;

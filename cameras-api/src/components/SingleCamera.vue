@@ -1,40 +1,19 @@
 <template>
- 
-  <div class="container">
-    
-    <div class='cards cr-left'>
-     <ul  class="card">
-         <ul class="info">
-             <!-- <router-link  v-if="typeof camera.cameraId !== 'undefined'" v-bind:to="{name: 'SingleCamera', params:{cameraId : camera.cameraId}}"> --> 
-                 <li>camera id: <span>{{cameraId}}</span></li>
-                <li>||||||||||||||||||||||||||||||||||||||||||||||||||||||</li>
-                 </ul>
-                 
-             </ul>
+	<div class="container">
+		<div class="cards cr-left">
+			<ul class="card">
+				<ul class="info"></ul>
+			</ul>
+		</div>
+	</div>
+</template>
 
-         </div>
-         
-     </div>
-  
-  </template>
-  
-  <script>
+<script>
+export default {
+	// props:["cameraId"],
 
-  export default {
-  props:["cameraId"],
-    
-  data(){
-
-    return{
-  
-    }
-
-  },
- 
-
-  }
-  </script>
-  
-  <style>
-  
-  </style> 
+	data() {
+		return {};
+	},
+};
+</script>
