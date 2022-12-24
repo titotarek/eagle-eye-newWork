@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
-		<div class="cards cr-left">
-			<div class="card">
+		<div class="cards">
+			<div class="card ">
 				<div class="info" v-if="camera">
 					<p>{{ camera.name }}</p>
 					<p>{{ camera.deviceTypeId }}</p>
