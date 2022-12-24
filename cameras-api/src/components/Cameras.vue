@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<LandingPageVue />
+		<LandingPage />
 		<div class="cards container cr-left">
 			<ul class="card" v-for="camera in cameras" :key="camera.cameraId">
 				<li class="info">
@@ -13,7 +13,6 @@
 						camera name : {{ camera.name }}
 					</router-link>
 				</li>
-
 			</ul>
 		</div>
 		<Footer />
@@ -24,9 +23,9 @@
 import axios from "axios";
 import { credentialsKey } from "../utils/constants.js";
 import Footer from "./Footer.vue";
-import LandingPageVue from "./LandingPage.vue";
+import LandingPage from "./LandingPage.vue";
 export default {
-	components: { LandingPageVue, Footer },
+	components: { LandingPage, Footer },
 	data() {
 		return {
 			code: "",
