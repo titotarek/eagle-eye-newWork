@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<LandingPage />
-		<div class="cards container cr-left">
+		<div class="cards container">
 			<ul class="card" v-for="camera in cameras" :key="camera.cameraId">
 				<li class="info">
 					<router-link
