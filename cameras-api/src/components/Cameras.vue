@@ -1,23 +1,19 @@
 <template>
 	<div>
-		<header className="heder">
-			<h1>Eagle Eye Networks Vue.Js Developer Assessment</h1>
-		</header>
-
-		<Header />
-
-		<div class="cards container">
-			<ul class="card info">
-				<li>
-					<!-- <router-link
+		<LandingPageVue />
+		<div class="cards container cr-left">
+			<ul class="card" v-for="camera in cameras" :key="camera.cameraId">
+				<li class="info">
+					<router-link
 						:to="{
 							name: 'SingleCamera',
 							params: { cameraId: camera.cameraId },
 						}"
 					>
-						<span>camera name : {{ camera.name }}</span>
-					</router-link> -->
+						camera name : {{ camera.name }}
+					</router-link>
 				</li>
+
 			</ul>
 		</div>
 		<Footer />
@@ -26,12 +22,11 @@
 
 <script>
 import axios from "axios";
+import { credentialsKey } from "../utils/constants.js";
 import Footer from "./Footer.vue";
-import Header from "./Header.vue";
-const accessTokenKey = "access-token";
-
+import LandingPageVue from "./LandingPage.vue";
 export default {
-	components: { Header, Footer },
+	components: { LandingPageVue, Footer },
 	data() {
 		return {
 			code: "",
@@ -42,8 +37,10 @@ export default {
 		};
 	},
 
-	mounted() {
-		let credentials = JSON.parse(localStorage.getItem(accessTokenKey) ?? null);
+	async mounted() {
+		const credentials = JSON.parse(
+			localStorage.getItem(credentialsKey) ?? null
+		);
 
 		if (credentials) {
 			this.credentials = credentials;
@@ -52,17 +49,16 @@ export default {
 			 * I don't know if the `expires_in` value can be used to check if the token is
 			 * expired because it's not jwt and there's not documentation on how to calculate it manually.
 			 */
-			const response = this.getCameras();
-			if (!response || response.status === 401) {
+			const response = await this.getCameras(credentials);
+
+			if (response.status === 200) {
+				this.cameras = response.data;
+			} else {
 				if (credentials.refresh_token) {
 					this.getAccessTokenFromRefreshToken(credentials.refresh_token);
 				} else {
 					this.getQueryCode();
 				}
-			}
-
-			if (response.status === 200) {
-				this.cameras = response.data;
 			}
 		} else {
 			this.getQueryCode();
@@ -70,22 +66,19 @@ export default {
 	},
 
 	methods: {
-		getCameras() {
-			try {
-				return axios({
-					method: "GET",
-					url: `https://rest.cameramanager.com/rest/v2.4/cameras`,
-					headers: {
-						"Content-Type": "application/json",
-						Accept: "application/json",
-						Authorization: `${this.credentials.token_type} ${this.credentials.access_token}`,
-					},
-				}).then((data) => {
-					console.log();
-				});
-			} catch (err) {
-				console.error(err);
-			}
+		getCameras(credentials) {
+			return axios({
+				method: "GET",
+				url: `https://rest.cameramanager.com/rest/v2.4/cameras`,
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+					Authorization: `${credentials.token_type} ${credentials.access_token}`,
+				},
+			}).then((response) => {
+				this.cameras = response.data;
+				return response;
+			});
 		},
 		getQueryCode() {
 			if (window.location.search.indexOf("code") > -1) {
@@ -93,7 +86,6 @@ export default {
 					searchParams = dl.searchParams;
 				this.code = searchParams.get("code");
 
-				console.log(this.code);
 				this.getAccessToken();
 			} else {
 				window.location.href = this.login;
@@ -113,12 +105,13 @@ export default {
 						"Basic ZGV2X3Rlc3Q6M0gxQmY2bUNjdElncEN1enZybnlla2YzVmhBVUVuS0o=",
 				},
 			})
-				.then(({ data }) => {
+				.then(async ({ data }) => {
 					if (data.status && data.status !== 200) {
 						console.error("Something went wrong!");
 					} else {
-						localStorage.setItem(accessTokenKey, JSON.stringify(data));
+						localStorage.setItem(credentialsKey, JSON.stringify(data));
 						this.credentials = data;
+						this.getCameras(data);
 					}
 				})
 				.catch((error) => {
@@ -143,9 +136,9 @@ export default {
 					if (data.status && data.status !== 200) {
 						console.error("Something went wrong!");
 					} else {
-						localStorage.setItem(accessTokenKey, JSON.stringify(response.data));
+						localStorage.setItem(credentialsKey, JSON.stringify(data));
 						this.credentials = data;
-						this.getCameras();
+						this.getCameras(data);
 					}
 				})
 				.catch((error) => {

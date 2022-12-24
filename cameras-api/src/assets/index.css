@@ -145,9 +145,7 @@ ul {
   .landing .text p {
     font-size: 18px;
   }
-  .search{
-    margin-left: 30%;
-  }
+ 
   
 }
 
@@ -192,58 +190,6 @@ ul {
 
 
 /*  Start  Cards */
-
-.search{
-  margin-left: 28%;
-
-  padding-top: 50px;
-  padding-bottom: 50px;
-
- 
-}
-.search-title{
-  margin-left: 170px;
-  margin-top: 100px;
-  font-weight: normal;
-  font-size: 40px;
-  position: relative;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-}
-
-.search .search-bar{
-  display: flex;
-  width: 500px;
-  max-width: 100%;
-  position: relative;
-
-}
-
-
-/* .search .search-bar i{
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 20px;
-  color:  var(--main-color);
-} */
-
-
-
-.search .search-bar  input[type="text"]{
-  background: none;
-  padding: 20px 20px 20px 60px;
-  caret-color: var(--main-color);
-  width: 100%;
-  margin-right: 20px;
-  outline: none;
- border:  2px solid var(--main-color);
- /* color: var(--main-color); */
-
-  
-}
-
 
 .cards{
   position: relative;
@@ -300,67 +246,7 @@ ul {
   
  }
 
-.btn{
-  position: relative;
-  top: 60px;
-color: var(--main-color);
-  margin-left: 41%;
-  align-items: center;
-  padding: 20px 80px;
-  border: 2px solid black;
-  cursor: pointer;
-  font-size: 22px;
-  text-transform: uppercase;
-  cursor: pointer;
-  z-index: 1;
-  transition:  var(--main-transition);
-  } 
 
-.btn::before,
-.btn::after{
-  content: "";
-  position: absolute;
-  height: 12px;
-  width: 12px;
-  background-color: var(--main-color);
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-} 
-
-.btn::before{
-  left:  -30px;
-}
-
-.btn::after{
-  right:-30px;
-}
-
-.btn:hover:before{
-  z-index: -1;
-  animation: left-move 0.5s linear  forwards ;
-}
-
-
-.btn:hover::after{
-  z-index: -1;
-  animation: right-move 0.5s linear  forwards ;
-}
-
-.btn:hover{
-  color: white;
-  border: 2px solid white;
-  transition-delay: .3s;
-
-} 
 /*  End  Cards */
 
 
@@ -381,9 +267,6 @@ color: var(--main-color);
 /*  End  Footer */
 
 
-.not-found{
-  padding-top: 10px;
-}
 
 
 /*  Start Animation */

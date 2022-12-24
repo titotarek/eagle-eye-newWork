@@ -1,14 +1,16 @@
 <template>
 	<div>
 		<ProgressIndicator />
+		<Header />
 		<router-link to="/"></router-link>
 		<router-view />
 	</div>
 </template>
 <script>
+import Header from "./components/Header.vue";
 import ProgressIndicator from "./components/ProgressIndicator.vue";
 export default {
-	components: { ProgressIndicator },
+	components: { ProgressIndicator, Header },
 	data() {
 		return {};
 	},
