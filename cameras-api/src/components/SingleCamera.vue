@@ -29,7 +29,7 @@ export default {
 		const credentials = JSON.parse(
 			localStorage.getItem(credentialsKey) ?? null
 		);
-
+        
 		axios({
 			method: "GET",
 			url: `https://rest.cameramanager.com/rest/v2.4/cameras/${this.cameraId}`,
