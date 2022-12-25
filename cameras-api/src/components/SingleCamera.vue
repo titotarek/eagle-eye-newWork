@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="cards">
-			<div class="card ">
+			<div class="card">
 				<div class="info" v-if="camera">
 					<p>{{ camera.name }}</p>
 					<p>{{ camera.deviceTypeId }}</p>
@@ -12,7 +12,6 @@
 		</div>
 	</div>
 </template>
-
 <script>
 import axios from "axios";
 import { credentialsKey } from "../utils/constants.js";
@@ -43,9 +42,7 @@ export default {
 			.then((response) => {
 				this.camera = response.data;
 			})
-			.then(() => {
-				console.log(this.camera);
-			})
+
 			.catch((err) => {
 				console.log(err);
 			});

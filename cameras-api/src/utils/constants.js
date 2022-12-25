@@ -1,1 +1,1 @@
-export const credentialsKey = "credentials"
+export const credentialsKey = "credentials";
