@@ -51,7 +51,7 @@ method: `POST`
     Content-Type: application/json
     Content-Length: 2
     
-     	{
+	{
 		"cameraId": 1729057,
 		"name": "Reception inside door",
 		"deviceTypeId": 10024,
@@ -86,13 +86,13 @@ method: `POST`
     Content-Length: 1
     
     
-   {
-		"cameraId": 1729057,
-		"name": "Reception inside door",
-		"deviceTypeId": 10024,
-		"ethMacAddress": "BC-32-5F-29-C8-69",
-		"zoneId": 785542,
-		"accountId": 27099
+  	 {
+	"cameraId": 1729057,
+	"name": "Reception inside door",
+	"deviceTypeId": 10024,
+	"ethMacAddress": "BC-32-5F-29-C8-69",
+	"zoneId": 785542,
+	"accountId": 27099
 	},
 
 
