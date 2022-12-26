@@ -2,9 +2,12 @@
 ## REST API application Eagle Eye NetWork
 
 
-The goal of this Api is to Authenticate the user to view the cameras from authentication verification by token
+ The goal of this Api is to Authenticate the user to view the cameras from authentication verification by refresh_token
 
-The entire application is contained within the `app.Vue` file.
+ a refresh_token can be requested to prevent the user from logging in again
+ 
+ After login, the user is redirected to the redirect_uri  to display all the cameras 
+ 
 
 
 ## Install
