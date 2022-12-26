@@ -12,10 +12,13 @@
 
 ## Clone the repo and install the dependencies.
 
+git clone git@github.com:titotarek/eagle-eye-newWork.git
 
+ cd cameras-api
+ 
    npm  install
    
-   
+
 ## Run the development server 
 
     npm npm run serve 
@@ -23,7 +26,7 @@
     
 ### Request
 
-method: `POST`
+`POST`
 
  - -  https://rest.cameramanager.com/
 
@@ -41,7 +44,7 @@ method: `POST`
 
 ### Request
 
- method : `GET`
+ `GET`
 
  - - https://rest.cameramanager.com/
 
