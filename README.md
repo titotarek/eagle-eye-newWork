@@ -12,8 +12,6 @@
 
 ## Clone the repo and install the dependencies.
 
-git clone $ git@github.com:titotarek/eagle-eye-newWork.git
-
  cd cameras-api
  
    npm  install
@@ -21,7 +19,7 @@ git clone $ git@github.com:titotarek/eagle-eye-newWork.git
 
 ## Run the development server 
 
-    npm npm run serve 
+    npm run serve 
     
     
 ### Request
