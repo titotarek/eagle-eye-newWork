@@ -10,7 +10,8 @@
  
 
 
-## Install
+## Clone the repo and install the dependencies.
+
 
    npm  install
    
