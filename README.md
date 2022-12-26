@@ -12,7 +12,7 @@
 
 ## Clone the repo and install the dependencies.
 
-git clone git@github.com:titotarek/eagle-eye-newWork.git
+git clone $ git@github.com:titotarek/eagle-eye-newWork.git
 
  cd cameras-api
  
