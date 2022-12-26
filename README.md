@@ -30,7 +30,7 @@ method: `POST`
 
 ### Response
 
-    Date: Sat, 23 Feb 2022 14:00 
+    Date: Fri , 23 Dec 2022 14:00 
     Content-Type: application/json
     Accept: application/json
     
@@ -48,7 +48,7 @@ method: `POST`
 ### Response
 
     HTTP/ 200 OK
-    Date: Sat, 23 Feb 2022 14:00 
+    Date: Fri , 23 Dec 2022 14:00 
     Status: 200 OK
     Content-Type: application/json
     Content-Type: application/json
@@ -82,7 +82,7 @@ method: `POST`
 ### Response
 
     HTTP/ 200 OK
-    Date: Sat, 23 Feb 2022 14:00 
+    Date: Fri , 23 Dec 2022 14:00 
     Status: 200 OK
     Content-Type: application/json
     Content-Type: application/json
