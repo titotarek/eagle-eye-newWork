@@ -51,6 +51,24 @@ method: `POST`
     Content-Type: application/json
     Content-Length: 2
     
+     	{
+		"cameraId": 1729057,
+		"name": "Reception inside door",
+		"deviceTypeId": 10024,
+		"ethMacAddress": "BC-32-5F-29-C8-69",
+		"zoneId": 785542,
+		"accountId": 27099
+	},
+   
+   	{
+		"cameraId": 1841837,
+		"name": "Entrance",
+		"deviceTypeId": 10009,
+		"ethMacAddress": "00-1C-27-15-61-D0",
+		"zoneId": 785542,
+		"accountId": 27099
+	}
+    
     
     ### Request
 
@@ -66,6 +84,16 @@ method: `POST`
     Content-Type: application/json
     Content-Type: application/json
     Content-Length: 1
+    
+    
+   {
+		"cameraId": 1729057,
+		"name": "Reception inside door",
+		"deviceTypeId": 10024,
+		"ethMacAddress": "BC-32-5F-29-C8-69",
+		"zoneId": 785542,
+		"accountId": 27099
+	},
 
 
 
